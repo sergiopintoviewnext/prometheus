@@ -33,6 +33,6 @@ scrape_configs:
     static_configs:
 {% for i in nodos %}
 {% if i != ansible_hostname %}
-      - targets: ["{{ i }}:9090"]
+      - targets: ["{{ i }}:9100"]
 {% endif %}
 {% endfor %}
