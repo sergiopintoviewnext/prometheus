@@ -5,6 +5,28 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Example assertion
-    ansible.builtin.assert:
-      that: true
+    - name: Iniciar servicio 
+      ansible.builtin.service:
+        name: node_exporter
+        state: started
+      register: status
+  
+
+    - name: Comprobar servicio
+      ansible.builtin.assert:
+        that: not status.changed
+        success_msg: "node_exporter corriendo"
+        fail_msg: "node_exporter no esta corriendo"
+
+
+    - name: Comprobar metricas
+      ansible.builtin.uri:
+        url: http://localhost:9100/metrics
+      register: metricas
+
+
+    - name: Comprobar codigo http
+      ansible.builtin.assert:
+        that: metricas.status == 200
+        success_msg: "obtencion de metricas OK"
+        fail_msg: "Error en obtencion de metricas"
