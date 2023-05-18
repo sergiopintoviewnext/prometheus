@@ -42,5 +42,6 @@
       ansible.builtin.assert:
         that: metricas.status == 200
         success_msg: "obtencion de metricas OK"
-        fail_msg: "Error en obtencion de metricas"           
+        fail_msg: "Error en obtencion de metricas"       
 
+...
