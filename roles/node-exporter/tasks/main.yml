@@ -42,4 +42,12 @@
     state: started
     enabled: true
 
+  
+- name: Permitir trafico por puerto de node_exporter
+  ansible.posix.firewalld:
+    port: 9100/tcp
+    state: enabled
+    permanent: true
+    immediate: true
+
 ...
