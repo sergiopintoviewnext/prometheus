@@ -9,12 +9,12 @@
       ansible.builtin.service:
         name: prometheus
         state: started
-      register: apache
+      register: status
   
 
     - name: Comprobar servicio
       ansible.builtin.assert:
-        that: not apache.changed
+        that: not status.changed
         success_msg: "prometheus corriendo"
         fail_msg: "prometheus no esta corriendo"
 
