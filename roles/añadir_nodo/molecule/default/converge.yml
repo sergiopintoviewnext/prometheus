@@ -3,8 +3,8 @@
 - name: Converge
   hosts: PROMETHEUS
   tasks:
-    - name: "Include nuevo_nodo"
+    - name: "Include añadir_nodo"
       include_role:
-        name: "nuevo_nodo"
+        name: "añadir_nodo"
 
 ...
