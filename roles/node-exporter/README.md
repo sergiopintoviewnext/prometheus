@@ -3,7 +3,7 @@ DESCRIPCIÓN
 
 Este rol realiza una instalación del servicio node_exporter mediante la descarga y utilizacion del paquete de github de node_exporter (https://github.com/prometheus/node_exporter/releases/) y la posterior creacion de este servicio. 
 
-Solo debe ejecutarse en el/los hosts que actuarán como nodos de Prometheus.
+Solo debe ejecutarse en el/los hosts que actuarán como nodos de Prometheus, NO en el servidor Prometheus.
 
 
 
