@@ -2,7 +2,7 @@ galaxy_info:
   role_name: node_exporter  # if absent directory name hosting role is used instead
   namespace: my_galaxy_namespace  # if absent, author is used instead
   author: Sergio Pinto
-  description: Rol instalacion prometheus
+  description: Rol instalacion node_exporter
   company: anonima
 
   # If the issue tracker for your role is not on github, uncomment the
