@@ -1,0 +1,12 @@
+- name: Instalación node_exporter
+  hosts: NODE_EXPORTER
+  become: true
+  roles:
+    - role: node_exporter
+
+- name: Instalación y configuracion Prometheus
+  hosts: PROMETHEUS
+  become: true
+  roles:
+    - role: prometheus
+    - role: añadir_nodo
