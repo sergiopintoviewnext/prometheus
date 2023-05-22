@@ -31,8 +31,4 @@ scrape_configs:
 
   - job_name: 'node_exporter'
     static_configs:
-{% for i in nodos %}
-{% if i != ansible_hostname %}
-      - targets: ["{{ i }}:9100"]
-{% endif %}
-{% endfor %}
+    #targets node_exporter

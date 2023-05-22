@@ -1,0 +1,6 @@
+[PROMETHEUS]
+server
+
+
+[NODE_EXPORTER]
+nodo4

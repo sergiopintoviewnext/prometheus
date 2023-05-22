@@ -1,0 +1,10 @@
+---
+
+- name: Converge
+  hosts: PROMETHEUS
+  tasks:
+    - name: "Include nuevo_nodo"
+      include_role:
+        name: "nuevo_nodo"
+
+...
